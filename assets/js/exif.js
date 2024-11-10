@@ -705,7 +705,10 @@
                         exifData[tag] = StringValues[tag][exifData[tag]];
                         break;
                     case "ExposureTime" :
-                        exifData[tag] = exifData[tag].numerator + "/" + exifData[tag].denominator;
+                        exifData[tag] = exifData[tag].numerator + "/" + exifData[tag].denominator + "s";
+                        break;
+                    case "FocalLength" :
+                        exifData[tag] = exifData[tag] + "mm";
                         break;
                     case "ExifVersion" :
                     case "FlashpixVersion" :
